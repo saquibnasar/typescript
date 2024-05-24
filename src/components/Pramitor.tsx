@@ -7,8 +7,9 @@ type ButtonProps = {
   padding?: number[];
   borderRadius: Record<string, number>;
   onClick: (word: string) => number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
   children: React.ReactNode;
-
+  count: number;
   // borderRadius: {
   //   topLeft: number;
   //   topRight: number;
@@ -27,6 +28,8 @@ export default function Pramitor({
   padding,
   borderRadius,
   onClick,
+  setCount,
+  count = 0,
   children,
 }: ButtonProps) {
   // export default function Pramitor({ style }: ButtonProps) {

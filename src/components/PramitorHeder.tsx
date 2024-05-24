@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Pramitor from "./Pramitor";
 
 export default function PramitorHeder() {
+  const [count, setCount] = useState(0);
   const onClick = (word: string) => {
     return 5;
   };
@@ -18,6 +20,7 @@ export default function PramitorHeder() {
           bottomRight: 3,
         }}
         onClick={onClick}
+        setCount={setCount}
       >
         Click me
       </Pramitor>
